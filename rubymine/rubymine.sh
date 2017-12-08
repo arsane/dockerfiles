@@ -8,7 +8,7 @@ CMD="docker run \
        --volume /tmp/.X11-unix:/tmp/.X11-unix \
        --volume $HOME/workspace/rubymine:/space \
        --volume $HOME/.rvm:/home/developer/.rvm \
-       dockerrubymine_ruby-mine"
+       rubymine_ruby-mine"
 
 echo $CMD
 $CMD

@@ -1,9 +1,7 @@
 #!/bin/bash
 
 # Launches CLion inside a Docker container
-
-# IMAGE=${1:-kurron/docker-clion:latest}
-IMAGE=${1:-dockerclion_clion}
+IMAGE=${1:-clion_clion}
 
 DOCKER_GROUP_ID=$(cut -d: -f3 < <(getent group docker))
 USER_ID=$(id -u $(whoami))
@@ -16,7 +14,7 @@ CMD="docker run --group-add ${DOCKER_GROUP_ID} \
                 --env HOME=/home/developer \
                 --env DISPLAY=unix${DISPLAY} \
                 --interactive \
-                --name CLion \
+                --name clion \
                 --net "host" \
                 --tty \
                 --user=${USER_ID}:${GROUP_ID} \

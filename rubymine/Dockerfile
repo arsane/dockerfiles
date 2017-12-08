@@ -1,10 +1,10 @@
 FROM kurron/docker-jetbrains-base:latest
 
-MAINTAINER Ron Kurr <kurr@kurron.org>
+MAINTAINER Sam Liao <phyomh@gmail.org>
 
-LABEL org.kurron.ide.name="RubyMine" org.kurron.ide.version=2016.3
+LABEL org.kurron.ide.name="RubyMine" org.kurron.ide.version=2017.3
 
-ADD https://download.jetbrains.com/ruby/RubyMine-2017.2.4.tar.gz /tmp/ide.tar.gz
+ADD https://download.jetbrains.com/ruby/RubyMine-2017.3.tar.gz /tmp/ide.tar.gz
 
 RUN mkdir -p /opt/ide && \
     tar zxvf /tmp/ide.tar.gz --strip-components=1 -C /opt/ide && \
