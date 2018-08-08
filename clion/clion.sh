@@ -18,9 +18,7 @@ CMD="docker run --group-add ${DOCKER_GROUP_ID} \
                 --net "host" \
                 --tty \
                 --user=${USER_ID}:${GROUP_ID} \
-                --volume $HOME:/home/powerless \
                 --volume /tmp/.X11-unix:/tmp/.X11-unix \
-                --volume /var/run/docker.sock:/var/run/docker.sock \
                 --workdir /tmp \
                 --volume $HOME/workspace/:/space \
                 ${IMAGE}"
